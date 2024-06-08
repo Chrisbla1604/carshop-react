@@ -1,0 +1,62 @@
+.contenedorPagina02{
+    background-color: whitesmoke;
+    width: 350px;
+    max-height: 720px;
+    margin: 0px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Lato, sans-serif;
+    font-weight:20px ;
+    font-size: 13px;
+    box-shadow: 0 3px 13px rgb(0, 0, 0);
+    border-radius:10px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;   
+}
+
+.formulariovehiculo{
+    align-items: center;
+    justify-content: center;
+}
+
+.camposVehiculo{
+    margin: 10px;
+}
+
+.inputVehiculo {
+    width: 280px;
+    height: 25px; 
+ }
+
+ .inputObservaciones{
+    width: 280px;
+    min-height:80px ;
+    max-height:150px; 
+ }
+
+.botonPag02{
+    padding-bottom: 10px ;
+    display: flex;
+    align-items: center;
+    justify-content:end;
+    
+}
+
+button.ContinuarPag02{
+    width:100px;
+    height:40px;
+    background-color:rgb(23, 15, 243);
+    font-size:small;
+    color:white;
+    border-radius: 10px  
+}
+
+
+.mensaje_error{
+    font-size: 12px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red;
+}
+

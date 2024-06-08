@@ -1,70 +1,65 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Proyecto React Bootcamp Full Stack Developer Cohorte II 
 
-In the project directory, you can run:
+# Autor: Christian Blanco Salazar
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Descripción del Proyecto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+        Aplicación para recepción de autos en un taller automotriz. Luego de tomar todos los datos necesarios la aplicación generará una orden de trabajo.
 
-### `npm test`
+		El proceso de recepción de un auto consiste de los siguientes pasos:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+		Datos del cliente:
+		En la primera ventana de la aplicación, deberá mostrarse un formulario para solicitar los datos del cliente.
+		Deberá contener los siguientes campos obligatorios: nombre del cliente, email, número de contacto, identificación fiscal y tipo de identificación (cédula, RUC, pasaporte).
 
-### `npm run build`
+		Datos del vehículo:
+		Una vez completados los datos del cliente, se mostrará un formulario adicional para solicitar los datos del vehículo.
+		Proporcionar la información del vehículo, como la marca, modelo, placa, nivel del tanque de gasolina, y un campo de texto donde se podrán detallar abolladuras, rayones o cualquier dato relevante sobre el estado exterior del vehículo.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+		Selección de servicios:
+		Después de ingresar los datos del vehículo, se presentará una lista de servicios disponibles que se pueden realizar en el taller automotriz.
+		Se deberá poder seleccionar los servicios que el cliente desea realizar en su vehículo. Menú de servicios: cambio de aceite, cambio de frenos, alineación y balanceo, diagnóstico general, revisión sistema eléctrica, revisión de la suspensión (son libres para agregar otros servicios que conozcan si quieren mostrar un menú más largo)
+		El cliente podrá seleccionar varios servicios marcando las casillas correspondientes junto a cada servicio.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+		Orden de trabajo:
+		Esta sección final mostrará toda la información ingresada para mostrarle al cliente y solicitar su aprobación final.
+		Se deberá mostrar una fecha y hora estimada de entrega.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+# Detalles del codigo
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    Para ir guardando de los datos a recibir en cada uno de los formularios se utilizo el HOOK REDUCER con el cual las funciones activan el trigger del reducer
+    y segun type del trigger guarda la informacion.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    Se implemento un estado para controlar el formulario que se debe mostrar, dicha variable se la pasa a los componentes por medio de un Context 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    La implementacion de formulario y el manejo de la validacion de los campos se lo hizo con el HOOK FORM 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+     las fuentes de consulta sobre Hook Form
 
-## Learn More
+            https://react-hook-form.com/get-started
+            https://blog.logrocket.com/react-hook-form-complete-guide/
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Despliegue
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+	 Se genero la carpeta Build usando en comando en la carpeta raiz del proyecto
+   
+         npm run-script build
 
-### Code Splitting
+    Se desplego la aplicacion en un servicio S3 de AWS 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    punto de acceso: http://carshop-cblanco-react-bootcampespol.s3-website-us-east-1.amazonaws.com/
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
