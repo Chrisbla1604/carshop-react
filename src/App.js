@@ -89,8 +89,17 @@ function App() {
 
   const subirTodatabase=()=>{
 
-    console.log('Enviando los datos a la Nube');
-    console.log(datosOrdenUsuario);
+    fetch('http://localhost:3000/users',{
+          method: "POST",
+          body: JSON.stringify(datosOrdenUsuario),
+          mode: "cors",
+          headers: {  'Content-type':'application/json;charset=utf-8',
+                      'Accept': 'application/json',
+                      'Access-Control-Allow-Origin':'*'
+          }
+      }).then((res) => res.json())
+        .catch((error) => console.error("Error:", error))
+        .then((response) => console.log("Success:",response))
   }
    
 
