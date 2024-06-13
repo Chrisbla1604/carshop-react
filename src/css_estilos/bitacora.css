@@ -1,0 +1,53 @@
+table{
+    margin: 2px;
+}
+
+.contenedor_cabecera{
+    width: 920px;
+}
+
+.contenedor_filas{
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.fila_header{
+    margin: 0px;
+    width: 920px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 0.5px;
+    border-color: black;
+    border-style: solid;
+    color: white;
+    background-color: blue;
+}
+
+.fila_registros{
+    margin: 0px;
+    width: 920px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.fila_header th{
+    width:250px;
+    color: white;
+}
+
+.fila_registros td{
+    width:250px;
+    color: black; 
+    margin-top: 5px;  
+}
+
+button {
+
+margin-left:15px ;
+margin: 5px;
+}
